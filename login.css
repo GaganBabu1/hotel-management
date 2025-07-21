@@ -1,0 +1,92 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background & layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-top: 100px; /* Space for fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #333;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Login box */
+.login-container {
+  background-color: #0e0b0be1;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  width: 420px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Title */
+.login-container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Inputs & Button */
+input,
+button {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+input {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Error or feedback message */
+#message {
+  margin-top: 18px;
+  color: red;
+  font-size: 16px;
+}
