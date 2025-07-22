@@ -1,0 +1,188 @@
+
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Flex layout for sticky footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1; /* This pushes footer down if content is short */
+}
+
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #333;
+  color: white;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation links as a horizontal row */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: border-bottom 0.3s ease;
+}
+
+/* Add underline for active link */
+.nav-links .active a {
+  border-bottom: 2px solid white;
+}
+
+/* Optional: hover effect */
+.nav-links li a:hover {
+  border-bottom: 2px solid white;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.hero {
+  flex: 2.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+}
+
+.hero .column {
+  flex: 1;
+  padding: 1rem;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #0e0b0be1;
+}
+
+.hero-left p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #0e0b0be1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-right form {
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: auto;
+}
+
+.hero-right form input,
+.hero-right form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.hero-right form button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.features {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+.feature {
+  flex: 1;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.feature h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  color: #0e0b0be1;
+}
+
+.feature p {
+  font-size: 1rem;
+}
+
+.know-more-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color:#0e0b0be1; /* Green shade */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.know-more-btn:hover {
+  background-color: #0e0b0be1;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+}
