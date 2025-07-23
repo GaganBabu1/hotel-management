@@ -1,0 +1,178 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flex layout for sticky footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body, html {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  height: 100%;
+  background-color: #f8f9fa;
+  color: #222;
+}
+.page-wrapper {
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 1.5rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-direction: row; 
+}
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+nav {
+  margin-top: 0.5rem;
+}
+nav a {
+  position: relative;
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav a:hover {
+  color: #ffcc00; 
+}
+
+.logo-link {
+  color: #fff;
+  text-decoration: none;
+}
+.logo-link:visited,
+.logo-link:active,
+.logo-link:focus,
+.logo-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.services-content {
+  flex: 1;
+  padding: 2.5rem 4vw 2rem 4vw;
+  background: #fff;
+  color: #222;
+}
+.services-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.services-title {
+  font-size: 2.1rem;
+  margin-bottom: 0.7rem;
+  color: #2d3e50;
+}
+.services-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-card {
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 270px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-card:hover {
+  box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3e50;
+  font-size: 1.25rem;
+}
+.service-card p {
+  color: #555;
+  font-size: 1rem;
+  margin: 0;
+}
+footer {
+  background: #2d3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .services-list {
+    gap: 1.2rem;
+  }
+  .service-card {
+    width: 220px;
+    padding: 1.3rem 1rem 1rem 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .services-content {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .services-title {
+    font-size: 1.4rem;
+  }
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .service-card {
+    width: 100%;
+    max-width: 350px;
+  }
+} 

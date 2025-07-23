@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Ease - Home</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-  <nav class="navbar">
-  <div class="logo">Hotel Ease</div>
-  <ul class="nav-links">
-    <li class="active"><a href="home.html">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+  <header>
+      <h1><a href="home.html" class="logo-link">Hotel Ease</a></h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
 
   <div class="container">
@@ -23,21 +23,23 @@
       <div class="column hero-left">
         <h1>Welcome to Hotel Ease</h1>
         <p>Book hotels effortlessly with our secure and user friendly platform.</p>
-        <button id="aboutBtn">About Us</button>
+       <button id="aboutBtn">About Us</button>
+
+
 
       </div>
       <div class="column hero-right">
         <form>
           <input type="text" placeholder="Search hotels..." />
-          <input type="date" />
-          <input type="date" />
+          <input type="text" id="arrival" placeholder="Arrival Date" autocomplete="off" />
+          <input type="text" id="departure" placeholder="Departure Date" autocomplete="off" />
           <select>
             <option value="">Select City</option>
             <option value="bangalore">Bangalore</option>
             <option value="mumbai">Mumbai</option>
             <option value="delhi">Delhi</option>
           </select>
-          <button type="submit">Search</button>
+          <button type="submit">Book</button>
         </form>
       </div>
     </section>
@@ -63,16 +65,19 @@
     <p>Live chat, email, and phone assistance anytime you need help.</p>
     <p>Multilingual support for a better user experience.</p>
     <button class="know-more-btn">Know More</button>
+
+
+
   </div>
 </section>
 
 
 
     <footer>
-      <p>&copy; 2025 Hotel Ease. All rights reserved.</p>
+      &copy; 2025 Hotel Ease. All rights reserved.
     </footer>
   </div>
 
-  <script src="home.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

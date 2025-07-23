@@ -1,0 +1,256 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+
+/* Wrapper */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: none;
+}
+
+header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 1.5rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+.logo-link {
+  color: #fff;
+  text-decoration: none;
+}
+.logo-link:visited,
+.logo-link:active,
+.logo-link:focus,
+.logo-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+nav {
+  margin-top: 0.5rem;
+}
+nav a {
+  position: relative;
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav a:hover {
+  color: #ffcc00; 
+}
+
+/* Main Content */
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+  color: #222;
+  border-radius: 0;
+}
+
+/* About Overview Section */
+.about-overview {
+  text-align: center;
+  padding: 10px;
+}
+
+.overview-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Badge above hotel name */
+.about-badge {
+  display: inline-block;
+  background: #e67e22;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 3px 14px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  box-shadow: 0 2px 8px rgba(230,126,34,0.08);
+}
+
+.about-title {
+  font-size: 2.3rem;
+  margin-bottom: 6px;
+  color: #0e0b0be1;
+  font-weight: bold;
+  border-bottom: 2.5px solid #e67e22;
+  display: inline-block;
+  padding-bottom: 7px;
+  margin-left: 0;
+  letter-spacing: 1px;
+}
+
+.about-tagline {
+  font-size: 1.15rem;
+  color: #e67e22;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.about-divider {
+  width: 100%;
+  max-width: 900px;
+  height: 0;
+  border-top: 2px dashed #e0e7ef;
+  margin: 36px auto 36px auto;
+}
+
+/* Column icons */
+.column-icon {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+  color: #e67e22;
+  text-align: center;
+}
+
+
+.column-box {
+  flex: 1;
+  background-color: #fff;
+  color: #222;
+  padding: 22px 18px 18px 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* About Overview Flex Layout */
+.overview-flex {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.overview-image-container {
+  flex: 0 0 320px;
+  max-width: 320px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+  background: #e9eef3;
+}
+
+.overview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.overview-text {
+  flex: 1 1 320px;
+  min-width: 220px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media (max-width: 800px) {
+  .overview-flex {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .overview-image-container, .overview-text {
+    max-width: 100%;
+    width: 100%;
+  }
+  .overview-image-container {
+    height: 180px;
+  }
+  .columns {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .about-divider {
+    margin: 28px 0 28px 0;
+  }
+}
+
+
+.about-content {
+  padding-bottom: 32px;
+}
+
+/* Footer */
+footer {
+  background: #2d3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 1rem;
+}

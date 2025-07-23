@@ -1,5 +1,5 @@
 
-/* Reset default spacing */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +8,12 @@
 
 html, body {
   height: 100%;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
 }
 
-/* Flex layout for sticky footer */
+
 body {
   display: flex;
   flex-direction: column;
@@ -18,51 +21,67 @@ body {
 }
 
 .container {
-  flex: 1; /* This pushes footer down if content is short */
+  flex: 1; 
 }
 
 
-/* Navbar container */
-.navbar {
+header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 1.5rem 2rem 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background-color: #333;
-  color: white;
+  flex-direction: row;
 }
-
-/* Logo styling */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
 }
-
-/* Navigation links as a horizontal row */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
+.logo-link {
+  color: #fff;
   text-decoration: none;
+}
+.logo-link:visited,
+.logo-link:active,
+.logo-link:focus,
+.logo-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+nav {
+  margin-top: 0.5rem;
+}
+nav a {
+  position: relative;
   color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  padding-bottom: 5px;
   font-weight: 500;
-  padding-bottom: 4px;
-  transition: border-bottom 0.3s ease;
+  transition: color 0.3s ease;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
-/* Add underline for active link */
-.nav-links .active a {
-  border-bottom: 2px solid white;
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-/* Optional: hover effect */
-.nav-links li a:hover {
-  border-bottom: 2px solid white;
+nav a:hover {
+  color: #ffcc00; 
 }
 
 
@@ -100,7 +119,7 @@ body {
 .hero-left button {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  background-color: #0e0b0be1;
+  background-color: #2d3e50;
   color: white;
   border: none;
   border-radius: 4px;
@@ -144,7 +163,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 0.5rem;
-  background-color: #fff;
+  background: #fff;
 }
 
 .feature {
@@ -166,7 +185,7 @@ body {
 .know-more-btn {
   margin-top: 10px;
   padding: 8px 16px;
-  background-color:#0e0b0be1; /* Green shade */
+  background-color:#2d3e50; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -181,8 +200,10 @@ body {
 
 
 footer {
-  background-color: #333;
-  color: white;
+  background: #2d3e50;
+  color: #fff;
   text-align: center;
-  padding: 12px 0;
+  padding: 1rem 0;
+  margin-top: auto;
+  font-size: 1rem;
 }
