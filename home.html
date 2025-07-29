@@ -4,79 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Ease - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-  <header>
+  <header class="main-header">
+    <div class="container header-container">
       <h1><a href="home.html" class="logo-link">Hotel Ease</a></h1>
-      <nav>
+      <nav class="main-nav">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-
-  <div class="container">
+  <main>
     <section class="hero">
-      <div class="column hero-left">
-        <h1>Welcome to Hotel Ease</h1>
-        <p>Book hotels effortlessly with our secure and user friendly platform.</p>
-       <button id="aboutBtn">About Us</button>
-
-
-
-      </div>
-      <div class="column hero-right">
-        <form>
-          <input type="text" placeholder="Search hotels..." />
-          <input type="text" id="arrival" placeholder="Arrival Date" autocomplete="off" />
-          <input type="text" id="departure" placeholder="Departure Date" autocomplete="off" />
-          <select>
-            <option value="">Select City</option>
-            <option value="bangalore">Bangalore</option>
-            <option value="mumbai">Mumbai</option>
-            <option value="delhi">Delhi</option>
-          </select>
-          <button type="submit">Book</button>
-        </form>
+      <div class="container hero-container">
+        <div class="hero-left">
+          <h2>Welcome to Hotel Ease</h2>
+          <p>Book hotels effortlessly with our secure and user-friendly platform.</p>
+          <button id="aboutBtn" class="primary-btn">About Us</button>
+        </div>
+        <div class="hero-right">
+          <form class="booking-form">
+            <label for="search">Search hotels</label>
+            <input type="text" id="search" placeholder="Search hotels..." />
+            <label for="arrival">Arrival Date</label>
+            <input type="date" id="arrival" placeholder="Arrival Date" autocomplete="off" />
+            <label for="departure">Departure Date</label>
+            <input type="date" id="departure" placeholder="Departure Date" autocomplete="off" />
+            <label for="city">Select City</label>
+            <select id="city">
+              <option value="">Select City</option>
+              <option value="bangalore">Bangalore</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="delhi">Delhi</option>
+            </select>
+            <button type="submit" class="primary-btn">Book</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <section class="features">
-  <div class="feature">
-    <h2>Easy Booking</h2>
-    <p>Quick and hassle-free hotel booking experience.</p>
-    <p>Choose from a wide range of hotels with real-time availability.</p>
-    <p>Instant confirmation and easy cancellation options.</p>
-    <button class="know-more-btn">Know More</button>
-  </div>
-  <div class="feature">
-    <h2>Secure Payments</h2>
-    <p>100% secure transactions with multiple payment options.</p>
-    <p>Supports UPI, net banking, credit/debit cards, and wallets.</p>
-    <p>All transactions are encrypted and protected from fraud.</p>
-    <button class="know-more-btn">Know More</button>
-  </div>
-  <div class="feature">
-    <h2>24/7 Support</h2>
-    <p>Dedicated customer support available round-the-clock.</p>
-    <p>Live chat, email, and phone assistance anytime you need help.</p>
-    <p>Multilingual support for a better user experience.</p>
-    <button class="know-more-btn">Know More</button>
+      <div class="container features-container">
+        <div class="feature-card">
+          <div class="feature-icon">🛏️</div>
+          <h3>Easy Booking</h3>
+          <p>Quick and hassle-free hotel booking experience. Choose from a wide range of hotels with real-time availability. Instant confirmation and easy cancellation options.</p>
+          <button class="secondary-btn">Know More</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3>Secure Payments</h3>
+          <p>100% secure transactions with multiple payment options. Supports UPI, net banking, credit/debit cards, and wallets. All transactions are encrypted and protected from fraud.</p>
+          <button class="secondary-btn">Know More</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📞</div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated customer support available round-the-clock. Live chat, email, and phone assistance anytime you need help. Multilingual support for a better user experience.</p>
+          <button class="secondary-btn">Know More</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-
-  </div>
-</section>
-
-
-
-    <footer>
+  <footer class="main-footer">
+    <div class="container">
       &copy; 2025 Hotel Ease. All rights reserved.
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <script src="js/home.js"></script>
 </body>

@@ -4,37 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hotel Ease - Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-
-  <header class="navbar">
-    <div class="logo"><a href="#" class="logo-link">Hotel Ease</a></div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="welcome-section">
-    <div class="welcome-content">
-      <h2>Welcome to Hotel Ease</h2>
-      <p>Experience luxury and comfort like never before.</p>
-      <button id="getStartedBtn">Get Started</button>
-
+<body class="sticky-footer-layout">
+  <header class="main-header">
+    <div class="container header-container">
+      <h1><a href="#" class="logo-link">Hotel Ease</a></h1>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
     </div>
-  </section>
-
-  <footer>
+  </header>
+  <main class="welcome-content-main">
+    <section class="welcome-section">
+      <div class="welcome-content">
+        <h2>Welcome to Hotel Ease</h2>
+        <p>Experience luxury and comfort like never before.</p>
+        <button id="getStartedBtn" class="primary-btn">Get Started</button>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
       &copy; 2025 Hotel Ease. All rights reserved.
-    </footer>
+    </div>
+  </footer>
   <script src="js/index.js"></script>
-
-
 </body>
 </html>

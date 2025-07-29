@@ -4,32 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register - Hotel Ease</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/register.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html" style="color: white; text-decoration: none;">Hotel Ease</a>
+  <header class="main-header">
+    <div class="container header-container">
+      <h1><a href="index.html" class="logo-link">Hotel Ease</a></h1>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
     </div>
-  </nav>
-
-  <div class="register-container">
-    <h2>Register for Hotel Ease</h2>
-    <form id="registerForm">
-  <input type="text" placeholder="Full Name" />
-  <input type="email" placeholder="Email" />
-  <input type="text" placeholder="Username" />
-  <input type="password" placeholder="Password" />
-  <button type="submit">Register</button>
-</form>
-<a href="login.html" class="login-link">Already a user?</a>
-  </div>
-
+  </header>
+  <main>
+    <div class="register-container">
+      <h2>Register for Hotel Ease</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button type="submit" class="primary-btn">Register</button>
+      </form>
+      <a href="login.html" class="login-link">Already a user?</a>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      &copy; 2025 Hotel Ease. All rights reserved.
+    </div>
+  </footer>
   <script>
     document.getElementById("registerForm").addEventListener("submit", function(e) {
       e.preventDefault(); // prevent form submission
-    
-      window.location.href = "login.html"; 
+      window.location.href = "login.html";
     });
   </script>
 </body>
